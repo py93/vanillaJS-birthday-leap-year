@@ -1,13 +1,13 @@
-var btnTranslate = document.querySelector("#btn-translate");
-var txtInput = document.querySelector("#txt-input");
-var divShow = document.querySelector("#div-Show");
+const btnTranslate = document.querySelector("#btn-translate");
+const txtInput = document.querySelector("#txt-input");
+const divShow = document.querySelector("#div-Show");
 
 btnTranslate.addEventListener("click", clickEventHandler)
 
-var userDD = "";
-var userMM = "";
-var userYYYY = "";
-var outputMessage = "";
+let userDD = "";
+let userMM = "";
+let userYYYY = "";
+let outputMessage = "";
 function validateDate(userDOB)
 {
   userDD = parseInt(userDOB.substring(1,3));
@@ -21,7 +21,7 @@ function validateDate(userDOB)
   return true;
 }
 function clickEventHandler(){
-    var inputText = txtInput.value;
+    const inputText = txtInput.value;
     if(validateDate(inputText)===true)
   {
     checkDateLeapYear(userYYYY);
